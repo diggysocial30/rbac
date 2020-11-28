@@ -21,8 +21,8 @@ public class DatasourceConfiguration {
 	@Primary
 	public DataSource dataSource() throws Exception {
 		log.info("Creating database ");
-		return DataSourceBuilder.create().url("jdbc:postgresql://localhost:5432/lomrbac")
-				.driverClassName("org.postgresql.Driver").username("lomrbac").password("Admimn@123").build();
+		return DataSourceBuilder.create().url("jdbc:h2:mem:testdb")
+				.driverClassName("org.h2.Driver").username("sa").password("").build();
 
 	}
 }
