@@ -1,6 +1,7 @@
 package com.example.rbac.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,5 +21,10 @@ public class RbacController {
 	@PostMapping(value = "/resource")
 	public Roles createResource(@RequestBody ResourceRequest resource) {
 		return rbacService.createResource(resource);
+	}
+	
+	@GetMapping(value = "/hello")
+	public String hello() {
+		return "hello";
 	}
 }
